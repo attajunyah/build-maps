@@ -18,16 +18,21 @@ require([
 
     // Function to toggle the basemap and button appearance
     const toggleBasemap = () => {
+        const searchWidgetDiv = document.getElementById("searchWidget");
         if (map.basemap.id === "streets-night-vector") {
             map.basemap = "streets-vector";
             toggleButton.classList.remove("night-mode");
             toggleButton.classList.add("active");
+            searchWidgetDiv.classList.remove("dark-mode"); // Ensure this is being called
         } else {
             map.basemap = "streets-night-vector";
             toggleButton.classList.add("night-mode");
             toggleButton.classList.remove("active");
+            searchWidgetDiv.classList.add("dark-mode"); // Ensure this is being called
         }
     };
+    
+
 
     // Set up a click event listener on the button
     toggleButton.addEventListener("click", toggleBasemap);

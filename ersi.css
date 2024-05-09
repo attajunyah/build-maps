@@ -45,7 +45,44 @@ html, body, #viewDiv {
 
 #searchWidget {
     position: absolute;
-    top: 20px; /* Adjust as needed */
+    top: 10px; /* Adjust as needed */
     right: 80px; /* Adjust based on toggle button */
+    width: 250px; /* Width of the search bar */
     z-index: 10; /* Ensure it's above other map layers */
+    padding: 5px 10px; /* Padding inside the search box */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background-color: rgba(255, 255, 255, 0.70); /* White background with 85% opacity */
+}
+
+.esri-search {
+    background-color: rgba(255, 255, 255, 0); /* Transparent background for Esri search components */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for 3D effect */
+}
+
+.esri-search .esri-search__input, .esri-search .esri-search__submit-button, .esri-search--multiple-sources .esri-search__sources-button {
+    background-color: rgba(255, 255, 255, 0); /* Making the input and button backgrounds transparent */
+}
+
+.esri-search .esri-search__input {
+    font-size: 16px; /* Larger font size for better readability */
+    padding: 10px 20px; /* Comfortable padding inside the input field */
+}
+
+.esri-search .esri-search__submit-button {
+    border-radius: 0 20px 20px 0; /* Rounded corners on the right side */
+}
+
+.esri-search .esri-input {
+    border: none; /* Remove default borders */
+    box-shadow: none; /* No internal shadow */
+    background-color: rgba(255, 255, 255, 0); /* Transparent background */
+}
+
+.esri-search--multiple-sources .esri-search__sources-button {
+    border-radius: 20px 0 0 20px; /* Rounded corners on the left side */
+}
+
+.esri-search__clear-button {
+    color: #666; /* Subtle color for the clear button */
 }
