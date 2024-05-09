@@ -45,4 +45,3 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) f
 
 If you have any questions or would like to contact me, please email at frimpongosei@hotmail.com.
 
-```
