@@ -1,4 +1,8 @@
-require(["esri/Map", "esri/views/MapView"], (Map, MapView) => {
+require([
+    "esri/Map",
+    "esri/views/MapView",
+    "esri/widgets/Search"
+], (Map, MapView, Search) => {
     const map = new Map({
         basemap: "streets-night-vector" // Initial basemap
     });
@@ -31,5 +35,16 @@ require(["esri/Map", "esri/views/MapView"], (Map, MapView) => {
     // Initial check to apply the night mode class if the night basemap is loaded by default
     if (map.basemap.id === "streets-night-vector") {
         toggleButton.classList.add("night-mode");
-    }
+    };
+
+    // Create the Search widget
+    const searchWidget = new Search({
+        view: view,
+        container: "searchWidget" // Specify your search widget container here
+    });
+
+    view.ui.add(searchWidget, {
+        position: "top-right",
+        index: 0
+    });
 });
